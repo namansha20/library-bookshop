@@ -1,0 +1,21 @@
+ID,title,descr,author_ID,stock,price,currency_code,genre_ID
+301,Amar Chitra Katha Vol. 1,"A collection of illustrated stories from Indian mythology, history, and folklore. Created by Anant Pai to educate children through comics.",203,120,199,INR,13
+302,Five Point Someone,"A novel by Chetan Bhagat about three IIT students navigating academic pressure and personal dilemmas.",204,75,250,INR,11
+303,The God of Small Things,"Arundhati Roy's Booker Prize-winning novel set in Kerala, exploring family, caste, and forbidden love.",205,60,349,INR,11
+304,The Inheritance of Loss,"Kiran Desai's award-winning novel about migration, identity, and post-colonialism in India.",206,45,299,INR,11
+305,My Gita,"Devdutt Pattanaik's modern interpretation of the Bhagavad Gita, blending mythology with contemporary insights.",207,80,399,INR,14
+306,Shiva Trilogy: Immortals of Meluha,"The first book in Amish Tripathi's Shiva Trilogy, reimagining Lord Shiva as a mortal hero.",208,100,350,INR,14
+307,Indigo,"A collection of short stories by Satyajit Ray, blending mystery, science fiction, and satire.",209,30,199,INR,13
+308,Wings of Fire,"Autobiography of Dr. A.P.J. Abdul Kalam, chronicling his journey from Rameswaram to the presidency.",211,200,180,INR,15
+309,The Man Who Knew Infinity,"Biography of mathematician Srinivasa Ramanujan, highlighting his genius and struggles.",217,40,299,INR,15
+310,Ignited Minds,"A motivational book by Dr. A.P.J. Abdul Kalam encouraging youth to dream big and innovate.",211,150,160,INR,15
+311,The Discovery of India,"Jawaharlal Nehru’s philosophical and historical exploration of India’s cultural heritage.",229,90,199,INR,15
+312,Train to Pakistan,"Khushwant Singh’s poignant novel set during the Partition of India, exploring human tragedy and resilience.",224,55,249,INR,11
+313,Agni Ki Udaan,"Hindi version of Wings of Fire, capturing Kalam’s inspirational life story.",211,100,170,INR,15
+314,The White Tiger,"Aravind Adiga’s Booker-winning novel about class struggle and ambition in modern India.",230,70,299,INR,11
+315,Chanakya's Chant,"A political thriller by Ashwin Sanghi, drawing parallels between ancient and modern Indian politics.",231,85,320,INR,14
+316,The Secret of the Nagas,"Second book in Amish Tripathi’s Shiva Trilogy, continuing Shiva’s journey through myth and mystery.",208,95,360,INR,14
+317,The Great Indian Novel,"Shashi Tharoor’s satirical retelling of the Mahabharata set in modern Indian politics.",227,40,399,INR,14
+318,The Argumentative Indian,"Amartya Sen’s essays on Indian history, culture, and identity.",232,30,349,INR,15
+319,Comic Con India Anthology,"A curated collection of Indian comic artists and writers, showcasing diverse styles and stories.",203,60,499,INR,13
+320,The Guide,"R.K. Narayan’s classic novel about transformation, spirituality, and redemption.",202,70,199,INR,11
