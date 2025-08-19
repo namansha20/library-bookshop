@@ -1,8 +1,8 @@
 {
   "name": "performace_tracker",
   "version": "1.0.0",
-  "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
+  "description": "A simple library book management project.",
+  "repository": "https://github.com/namansha20/library-bookshop",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {

@@ -1,7 +1,7 @@
 _schema-version: 3.3.0
-ID: performace_tracker
+ID: library_bookshop
 version: 1.0.0
-description: "A simple CAP project."
+description: "A simple library book management project."
 parameters:
   enable-parallel-deployments: true
 build-parameters:
@@ -12,7 +12,7 @@ build-parameters:
         - npx cds build --production
 
 modules:
-  - name: performace_tracker-srv
+  - name: library_bookshop-srv
     type: nodejs
     path: gen/srv
     parameters:
@@ -25,12 +25,12 @@ modules:
         properties:
           srv-url: ${default-url}
     requires:
-      - name: performace_tracker-auth
-      - name: performace_tracker-db
-      - name: performace_tracker-connectivity
-      - name: performace_tracker-destination
+      - name: library_bookshop-auth
+      - name: library_bookshop-db
+      - name: library_bookshop-connectivity
+      - name: library_bookshop-destination
 
-  - name: performace_tracker-db-deployer
+  - name: library_bookshop-db-deployer
     type: nodejs
     path: gen/db
     parameters:
@@ -38,9 +38,9 @@ modules:
     build-parameters:
       builder: npm-ci
     requires:
-      - name: performace_tracker-db
+      - name: library_bookshop-db
 
-  - name: performace_tracker
+  - name: library_bookshop
     type: approuter.nodejs
     path: app/router
     parameters:
@@ -54,8 +54,8 @@ modules:
           name: srv-api
           url: ~{srv-url}
           forwardAuthToken: true
-      - name: performace_tracker-auth
-      - name: performace_tracker-destination
+      - name: library_bookshop-auth
+      - name: library_bookshop-destination
     provides:
       - name: app-api
         properties:
@@ -63,17 +63,17 @@ modules:
           app-uri: ${default-uri}
 
 resources:
-  - name: performace_tracker-auth
+  - name: library_bookshop-auth
     type: org.cloudfoundry.managed-service
     parameters:
       service: xsuaa
       service-plan: application
       path: ./xs-security.json
       config:
-        xsappname: performace_tracker-${org}-${space}
+        xsappname: library_bookshop-${org}-${space}
         tenant-mode: dedicated
         role-collections:
-          - name: 'admin (performace_tracker ${org}-${space})'
+          - name: 'admin (library_bookshop ${org}-${space})'
             description: 'generated'
             role-template-references:
               - '$XSAPPNAME.admin'
@@ -83,19 +83,19 @@ resources:
     requires:
       - name: app-api
 
-  - name: performace_tracker-db
+  - name: library_bookshop-db
     type: com.sap.xs.hdi-container
     parameters:
       service: hana
       service-plan: hdi-shared
 
-  - name: performace_tracker-connectivity
+  - name: library_bookshop-connectivity
     type: org.cloudfoundry.managed-service
     parameters:
       service: connectivity
       service-plan: lite
 
-  - name: performace_tracker-destination
+  - name: library_bookshop-destination
     type: org.cloudfoundry.managed-service
     parameters:
       service: destination

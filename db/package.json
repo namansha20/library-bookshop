@@ -1,5 +1,5 @@
 {
-  "name": "performace_tracker-db",
+  "name": "library_bookshop-db",
   "dependencies": {
     "@sap/hdi-deploy": "^4"
   },
