@@ -10,6 +10,7 @@ build-parameters:
       commands:
         - npm ci
         - npx cds build --production
+
 modules:
   - name: performace_tracker-srv
     type: nodejs
@@ -20,7 +21,7 @@ modules:
     build-parameters:
       builder: npm-ci
     provides:
-      - name: srv-api # required by consumers of CAP services (e.g. approuter)
+      - name: srv-api
         properties:
           srv-url: ${default-url}
     requires:
@@ -30,8 +31,12 @@ modules:
       - name: performace_tracker-destination
 
   - name: performace_tracker-db-deployer
-    type: hdb
+    type: nodejs
     path: gen/db
+    parameters:
+      buildpack: nodejs_buildpack
+    build-parameters:
+      builder: npm-ci
     requires:
       - name: performace_tracker-db
 
@@ -46,7 +51,7 @@ modules:
       - name: srv-api
         group: destinations
         properties:
-          name: srv-api # must be used in xs-app.json as well
+          name: srv-api
           url: ~{srv-url}
           forwardAuthToken: true
       - name: performace_tracker-auth
@@ -77,16 +82,19 @@ resources:
             - https://*~{app-api/app-uri}/**
     requires:
       - name: app-api
+
   - name: performace_tracker-db
     type: com.sap.xs.hdi-container
     parameters:
       service: hana
       service-plan: hdi-shared
+
   - name: performace_tracker-connectivity
     type: org.cloudfoundry.managed-service
     parameters:
       service: connectivity
       service-plan: lite
+
   - name: performace_tracker-destination
     type: org.cloudfoundry.managed-service
     parameters:
